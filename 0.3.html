@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>item #0</title>
+</head>
+<body>
+	<input type="text" id="value_a">
+	<select id="action">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="/">/</option>
+		<option value="*">*</option>
+	</select>
+	<input type="text" id="value_b">
+	=
+	<span id="result"></span>
+	<br/><br/>
+	<button onclick="doCalc()">Calc</button>
+	<script type="text/javascript">
+
+		function doCalc() {
+			let value_a = document.getElementById('value_a').value;
+			let value_b = document.getElementById('value_b').value;
+			let action = document.getElementById('action').value;
+
+			let result = document.getElementById('result');
+			
+		}
+	</script>
+</body>
+</html>

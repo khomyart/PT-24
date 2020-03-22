@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>item #0</title>
+</head>
+<body>
+	<input type="text" id="value_a">
+	<select id="action">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="/">/</option>
+		<option value="*">*</option>
+	</select>
+	<input type="text" id="value_b">
+	=
+	<span id="result"></span>
+	<br/><br/>
+	<button onclick="doCalc()">Calc</button>
+	<script type="text/javascript">
+
+		function doCalc() {
+			let value_a = parseFLoat(document.getElementById('value_a').value);
+			let value_b = parseFLoat(document.getElementById('value_b').value);
+			let action = document.getElementById('action').value;
+			let displayedResult = document.getElementById('result');
+			let result;
+			
+			if (value_a === '' || value_b === '') {
+				alert ('wrong data value');
+				displayedResult = undefined;
+			} else {
+				switch (action) {
+					case '+':
+						result = value_a + value_b;
+						break;
+					case '-':
+						result = value_a - value_b;
+						break;
+					case '/':
+						result = value_a / value_b;
+						break;
+					case '*':
+						result = value_a * value_b;
+						break;
+				}
+
+				displayedResult.innerText = result;
+
+				if (!isFinite(result)) {
+					displayedResult.innerText = '∞';
+				} else {
+					if (isNaN(result)) {
+						displayedResult.innerText = 'N/A';
+					} else {
+						displayedResult.innerText = result;
+					}
+				}			
+			}
+		}
+	</script>
+</body>
+</html>
