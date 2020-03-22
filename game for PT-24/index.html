@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Homework for PT-24</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="player_container">
+			<h1>Player 1</h1>
+			<div class="buttons_holder">
+				<button onclick="player1.takeOnePoint()">Take one</button>
+				<button onclick="player1.takeTwoPoints()">Take two</button>
+				<button onclick="player1.takeThreePoints()">Take three</button>
+			</div>
+		</div>
+		<div id='points_holder' class="points_holder">
+		</div>
+		<div class="player_container">
+			<div class="buttons_holder">
+				<button onclick="player2.takeOnePoint()">Take one</button>
+				<button onclick="player2.takeTwoPoints()">Take two</button>
+				<button onclick="player2.takeThreePoints()">Take three</button>
+			</div>
+			<h1>Player 2</h1>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="js/gameClass.js"></script>
+	<script type="text/javascript" src="js/playerClass.js"></script>
+	<script type="text/javascript" src="js/gameInitializer.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-size: 13px;
+}
+
+.container {
+	width: 500px;
+	height: 300px;
+	border: 2px solid green;
+}
+
+.player_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 40%
+}
+
+.buttons_holder {
+	width: 45%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.points_holder {
+	height: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.point {
+	height: 17px;
+	width: 17px;
+	border-radius: 50%;
+	background: green;
+	margin: 4px;
+}
+
+h1 {
+	font-size: 2rem;
+	padding: 20px;
+}
+
