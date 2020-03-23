@@ -19,7 +19,7 @@ class Game {
 		setTimeout(alert, delay, message);
 	}
 
-	giveNeededAmountOfPoints(pointsToTake, playerName) {
+	givePlayerNeededAmountOfPoints(pointsToGive, playerName) {
 		if (this.isGameOver === true) {
 			this.showAlertMessageWithDelay('Game is over!', 100);
 			return 0;
@@ -30,15 +30,15 @@ class Game {
 			return 0;
 		}
 
-		if (this.numberOfAvailablePoints < pointsToTake) {
+		if (this.numberOfAvailablePoints < pointsToGive) {
 			this.showAlertMessageWithDelay('You cant use this button right now!', 100);
 			return 0;
 		}
 
-		this.numberOfAvailablePoints -= pointsToTake;
+		this.numberOfAvailablePoints -= pointsToGive;
 		this.displayPoints();
 
-		if (this.numberOfAvailablePoints === 0 && (pointsToTake === 3 || pointsToTake === 2)) {
+		if (this.numberOfAvailablePoints === 0 && (pointsToGive === 3 || pointsToGive === 2)) {
 			this.showAlertMessageWithDelay('Win of ' + this.lastPlayerWhoPressedButton, 100);
 			this.isGameOver = true;
 			return 0;
